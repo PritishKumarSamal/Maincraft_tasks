@@ -1,1 +1,197 @@
+# MainCrafts Technology - VLSI Design Internship
+## Task 3: Verilog RTL Design of Sequential Circuits and Flip-Flops
 
+###  Overview :
+This repository contains the implementation of **Task 3** of my **VLSI Design Internship** at **MainCrafts Technology**.
+
+The objective of this task is to design, simulate, and verify fundamental **sequential digital circuits** using **Verilog HDL**. The designs were implemented and simulated using **Xilinx Vivado**, and waveform analysis was performed to verify the correct operation of each circuit.
+
+---
+
+##  Objectives :
+
+- Understand sequential logic design
+- Design Flip-Flops using Verilog HDL
+- Implement 4-bit Register and 4-bit Counter
+- Develop testbenches for verification
+- Analyze simulation waveforms
+- Learn RTL design methodology
+
+---
+
+#  Project Structure:
+
+Task-3/
+│── d_flipflop.v
+│── tb_d_flipflop.v
+│
+│── jk_flipflop.v
+│── tb_jk_flipflop.v
+│
+│── register4.v
+│── tb_register4.v
+│
+│── counter_4bit.v
+│── tb_counter_4bit.v
+│
+│── Simulation_Results/
+│     ├── D Flip-Flop Waveforms
+│     ├── JK Flip-Flop Waveforms
+│     ├── Register Waveforms
+│     └── Counter Waveforms
+│
+│── maincrafts_task-3.pdf
+│
+└── README.md
+
+---
+
+#  Tools Used :
+
+- Verilog HDL
+- Xilinx Vivado
+
+---
+
+#  Modules Implemented : 
+
+## 1. D Flip-Flop
+
+### Description
+The D Flip-Flop is a positive edge-triggered sequential circuit that stores one bit of data. During every rising edge of
+the clock signal, the output **Q** takes the value present at the **D** input.
+
+### Applications
+
+- Registers
+- Memory Elements
+- Shift Registers
+- Synchronizers
+- Data Storage
+
+---
+
+## 2. JK Flip-Flop
+
+### Description
+The JK Flip-Flop removes the invalid state of the SR Flip-Flop. Depending on the values of **J** and **K**, it 
+can Hold, Reset, Set, or Toggle the output.
+
+### Truth Table
+
+| J | K | Q(next)  |
+|---|---|----------|
+| 0 | 0 | No Change|
+| 0 | 1 |  Reset   |
+| 1 | 0 |   Set    |
+| 1 | 1 |  Toggle  |
+
+### Applications
+- Counters
+- Frequency Divider
+- Control Circuits
+- Sequential Logic
+
+---
+## 3. 4-Bit Register
+
+### Description
+A 4-bit Register stores four bits simultaneously. The input data is loaded into the register on the positive edge 
+of the clock and remains stored until the next clock edge.
+
+### Features
+- Parallel Data Storage
+- Positive Edge Triggered
+- 4-bit Output
+
+### Applications
+- CPU Registers
+- Temporary Data Storage
+- Buffers
+- Digital Systems
+
+---
+
+## 4. 4-Bit Counter
+
+### Description
+The 4-bit synchronous counter increments its count on every rising edge of the clock. After reaching **1111 (F)**, 
+it automatically rolls over to **0000**.
+
+### Counting Sequence
+```
+0000
+0001
+0010
+0011
+....
+1110
+1111
+0000
+```
+
+### Applications
+- Digital Clocks
+- Timers
+- Event Counters
+- Frequency Division
+
+---
+
+#  Simulation Results :
+
+Behavioral simulations were performed using **Xilinx Vivado**.
+
+The simulation waveforms confirm:
+- ✔ Correct D Flip-Flop operation
+- ✔ JK Hold, Reset, Set and Toggle operations
+- ✔ Proper Register data storage
+- ✔ Correct Counter sequence from 0 to F
+- ✔ Clock-synchronized sequential behavior
+
+---
+
+#  Learning Outcomes :
+
+Through this task, I learned:
+- Sequential Logic Design
+- RTL Coding using Verilog HDL
+- Flip-Flop Design
+- Register Design
+- Counter Design
+- Testbench Development
+- Behavioral Simulation
+- Waveform Analysis
+- Debugging Sequential Circuits
+
+---
+
+#  Report :
+
+A detailed report containing:
+- Circuit Design
+- Theory
+- Truth Tables
+- Simulation Results
+- Observations
+is included as:
+**maincrafts_task-3.pdf**
+
+---
+
+#  Future Improvements :
+- Parameterized Counter
+- Up/Down Counter
+- Asynchronous Reset
+- Synchronous Reset
+- Shift Registers
+- Ring Counter
+- Johnson Counter
+
+---
+
+##  Author :
+
+**Pritish Kumar Samal**
+** LinkedIn ID : https://www.linkedin.com/in/pritish-samal-20242028iter?utm_source=share_via&utm_content=profile&utm_medium=member_android
+** GitHub ID : https://github.com/PritishKumarSamal
